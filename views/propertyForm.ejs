@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Property Form</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    form {
+      display: grid;
+      grid-gap: 20px;
+      justify-items: center; /* Align form items horizontally */
+    }
+
+    label {
+      grid-column: 1 / 2;
+    }
+
+    input,
+    textarea {
+      grid-column: 2 / 3;
+      width: 100%;
+    }
+
+    input[type="submit"] {
+      grid-column: span 2;
+      justify-self: center;
+      padding: 8px 16px;
+      font-size: 16px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <h1>Property Form</h1>
+  <form method="POST" action="/property-form">
+    <label for="propertyType">Property Type:</label>
+    <input type="text" id="propertyType" name="propertyType" required>
+
+    <label for="propertyValue">Property Value:</label>
+    <input type="text" id="propertyValue" name="propertyValue" required>
+
+    <label for="propertySize">Property Size:</label>
+    <input type="text" id="propertySize" name="propertySize" required>
+
+    <label for="propertyHeight">Property Height:</label>
+    <input type="text" id="propertyHeight" name="propertyHeight" required>
+
+    <label for="propertyRating">Property Rating:</label>
+    <input type="text" id="propertyRating" name="propertyRating" required>
+
+    <label for="propertyDescription">Property Description:</label>
+    <textarea id="propertyDescription" name="propertyDescription" required></textarea>
+
+    <label for="contact">Contact:</label>
+    <input type="text" id="contact" name="contact" required>
+
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="age">Age:</label>
+    <input type="number" id="age" name="age" required>
+
+    <label for="aadharCardNumber">Aadhar Card Number:</label>
+    <input type="text" id="aadharCardNumber" name="aadharCardNumber" required>
+
+    <label for="panCardNumber">Pan Card Number:</label>
+    <input type="text" id="panCardNumber" name="panCardNumber" required>
+
+    <label for="propertyLocation">Property Location:</label>
+    <input type="text" id="propertyLocation" name="propertyLocation" required>
+
+    <input type="submit" value="Submit">
+  </form>
+</body>
+</html>
